@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>FitCort</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241015134044">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="" class="header__logo">
+						<img src="img/logo.svg" alt="logo">
+					</a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#program" class="menu__link">Про програму</a>
+								</li>
+								<li class="menu__item">
+									<a href="#programs" class="menu__link">Послуги</a>
+								</li>
+								<li class="menu__item">
+									<a href="#contacts" class="menu__link">Контакти</a>
+								</li>
+								<li class="menu__item">
+									<a href="#reviews" class="menu__link">Відгуки</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<div class="header__search search-top">
+							<button type="button" class="search-top__btn">
+								<svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21 21.0002L16.657 16.6572M16.657 16.6572C17.3998 15.9143 17.9891 15.0324 18.3912 14.0618C18.7932 13.0911 19.0002 12.0508 19.0002 11.0002C19.0002 9.9496 18.7932 8.90929 18.3912 7.93866C17.9891 6.96803 17.3998 6.08609 16.657 5.34321C15.9141 4.60032 15.0321 4.01103 14.0615 3.60898C13.0909 3.20693 12.0506 3 11 3C9.94936 3 8.90905 3.20693 7.93842 3.60898C6.96779 4.01103 6.08585 4.60032 5.34296 5.34321C3.84263 6.84354 2.99976 8.87842 2.99976 11.0002C2.99976 13.122 3.84263 15.1569 5.34296 16.6572C6.84329 18.1575 8.87818 19.0004 11 19.0004C13.1217 19.0004 15.1566 18.1575 16.657 16.6572Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+							<div class="search-top__body">
+								<input autocomplete="on" type="text" name="search" placeholder="Пошук по сторінці" class="search-top__input">
+								<button type="submit" class="search-top__btn-search">
+									<svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M21 21.0002L16.657 16.6572M16.657 16.6572C17.3998 15.9143 17.9891 15.0324 18.3912 14.0618C18.7932 13.0911 19.0002 12.0508 19.0002 11.0002C19.0002 9.9496 18.7932 8.90929 18.3912 7.93866C17.9891 6.96803 17.3998 6.08609 16.657 5.34321C15.9141 4.60032 15.0321 4.01103 14.0615 3.60898C13.0909 3.20693 12.0506 3 11 3C9.94936 3 8.90905 3.20693 7.93842 3.60898C6.96779 4.01103 6.08585 4.60032 5.34296 5.34321C3.84263 6.84354 2.99976 8.87842 2.99976 11.0002C2.99976 13.122 3.84263 15.1569 5.34296 16.6572C6.84329 18.1575 8.87818 19.0004 11 19.0004C13.1217 19.0004 15.1566 18.1575 16.657 16.6572Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</button>
+							</div>
+						</div>
+						<a href="" class="header__user">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21.6486 19.8751C20.2208 17.4067 18.0205 15.6367 15.4527 14.7976C16.7229 14.0415 17.7097 12.8893 18.2617 11.518C18.8136 10.1468 18.9002 8.63224 18.5081 7.20701C18.116 5.78178 17.2668 4.52467 16.0911 3.62873C14.9154 2.73279 13.4781 2.24756 11.9999 2.24756C10.5217 2.24756 9.08438 2.73279 7.90866 3.62873C6.73294 4.52467 5.88382 5.78178 5.49171 7.20701C5.09959 8.63224 5.18616 10.1468 5.73813 11.518C6.29009 12.8893 7.27692 14.0415 8.54708 14.7976C5.97926 15.6357 3.77895 17.4057 2.35114 19.8751C2.29878 19.9605 2.26405 20.0555 2.249 20.1545C2.23394 20.2535 2.23888 20.3545 2.2635 20.4516C2.28813 20.5487 2.33195 20.6399 2.39238 20.7197C2.45281 20.7996 2.52862 20.8666 2.61535 20.9167C2.70207 20.9667 2.79795 20.999 2.89733 21.0114C2.99671 21.0238 3.09757 21.0163 3.19397 20.9891C3.29037 20.9619 3.38034 20.9157 3.45859 20.8532C3.53684 20.7907 3.60178 20.7131 3.64958 20.6251C5.41583 17.5726 8.5377 15.7501 11.9999 15.7501C15.4621 15.7501 18.584 17.5726 20.3502 20.6251C20.398 20.7131 20.4629 20.7907 20.5412 20.8532C20.6194 20.9157 20.7094 20.9619 20.8058 20.9891C20.9022 21.0163 21.0031 21.0238 21.1024 21.0114C21.2018 20.999 21.2977 20.9667 21.3844 20.9167C21.4712 20.8666 21.547 20.7996 21.6074 20.7197C21.6678 20.6399 21.7116 20.5487 21.7363 20.4516C21.7609 20.3545 21.7658 20.2535 21.7508 20.1545C21.7357 20.0555 21.701 19.9605 21.6486 19.8751ZM6.74989 9.00011C6.74989 7.96176 7.05779 6.94672 7.63467 6.08337C8.21155 5.22001 9.03149 4.5471 9.9908 4.14974C10.9501 3.75238 12.0057 3.64841 13.0241 3.85099C14.0425 4.05356 14.978 4.55357 15.7122 5.2878C16.4464 6.02202 16.9464 6.95748 17.149 7.97589C17.3516 8.99429 17.2476 10.0499 16.8503 11.0092C16.4529 11.9685 15.78 12.7884 14.9166 13.3653C14.0533 13.9422 13.0382 14.2501 11.9999 14.2501C10.608 14.2486 9.27347 13.695 8.28922 12.7108C7.30498 11.7265 6.75138 10.392 6.74989 9.00011Z" />
+							</svg>
+						</a>
+						<a href="#contacts" class="header__btn button">
+							Записатися <span class="header__btn-desctop-text">на пробне тренування</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="hero__top">
+							<h2 class="hero__subtitle">
+								<span class="hero__subtitle--1">Обирай </span>
+								<span class="hero__subtitle--2">вірний </span>
+								<span class="hero__subtitle--3">шлях</span>
+							</h2>
+							<div class="hero__top-text">
+								любові до свого тіла
+							</div>
+						</div>
+						<h1 class="hero__title">
+							<span>СОТВОРИ </span>
+							<span>СЕБЕ</span>
+						</h1>
+						<div class="hero__img">
+							<img src="img/hero/hero-girl.png" alt="Image">
+						</div>
+						<div class="hero__info">
+							<div class="hero__text">
+								Наша команда зростає кожного дня
+							</div>
+							<div class="hero__command">
+								<div class="hero__item">
+									<img src="img/hero/avatar-1.jpg" alt="Image">
+								</div>
+								<div class="hero__item">
+									<img src="img/hero/avatar-2.jpg" alt="Image">
+								</div>
+								<div class="hero__item">
+									<img src="img/hero/avatar-3.jpg" alt="Image">
+								</div>
+								<div class="hero__item">
+									<img src="img/hero/avatar-4.jpg" alt="Image">
+								</div>
+								<div class="hero__item">
+									<img src="img/hero/avatar-5.jpg" alt="Image">
+								</div>
+								<div class="hero__item">
+									+56
+								</div>
+							</div>
+							<div class="hero__subtext">
+								Досягайте своїх фітнес-цілей з особистим тренером без виходу з дому
+							</div>
+						</div>
+						<a href="#contacts" class="hero__btn button--2">
+							Приєднуйся зараз
+						</a>
+						<div class="hero__socials">
+							<a href="" class="hero__social">
+								<svg width="9" height="17" viewBox="0 0 9 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 9.775H8.14286L9 6.375H6V4.675C6 3.7995 6 2.975 7.71429 2.975H9V0.119C8.72057 0.0824501 7.66543 0 6.55114 0C4.224 0 2.57143 1.40845 2.57143 3.995V6.375H0V9.775H2.57143V17H6V9.775Z" />
+								</svg>
+							</a>
+							<a href="" class="hero__social">
+								<svg width="17" height="14" viewBox="0 0 17 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M17 1.64706C16.3743 1.93529 15.6998 2.12471 15.001 2.21529C15.7161 1.77882 16.2686 1.08706 16.5287 0.255294C15.8542 0.667059 15.1066 0.955294 14.3184 1.12C13.6764 0.411765 12.7744 0 11.7505 0C9.84082 0 8.28059 1.58118 8.28059 3.53294C8.28059 3.81294 8.3131 4.08471 8.36998 4.34C5.47706 4.19177 2.90105 2.78353 1.18642 0.650588C0.885755 1.16941 0.715105 1.77882 0.715105 2.42118C0.715105 3.64824 1.32457 4.73529 2.26721 5.35294C1.69025 5.35294 1.15392 5.18824 0.682601 4.94118V4.96588C0.682601 6.67882 1.88528 8.11176 3.47801 8.43294C2.96674 8.57536 2.42976 8.5951 1.90966 8.49059C2.13037 9.19263 2.56263 9.80692 3.14566 10.2471C3.7287 10.6873 4.4332 10.9313 5.16013 10.9447C3.92793 11.9334 2.40049 12.4677 0.828872 12.46C0.552581 12.46 0.276291 12.4435 0 12.4106C1.54398 13.4153 3.3805 14 5.34704 14C11.7505 14 15.2691 8.61412 15.2691 3.94471C15.2691 3.78824 15.2691 3.64 15.261 3.48353C15.9436 2.98941 16.5287 2.36353 17 1.64706Z" />
+								</svg>
+							</a>
+							<a href="" class="hero__social">
+								<svg width="17" height="17" viewBox="0 0 17 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4003_1409)">
+										<path d="M15.4062 0H1.59375C0.717188 0 0 0.717188 0 1.59375V15.4062C0 16.2828 0.717188 17 1.59375 17H15.4062C16.2828 17 17 16.2828 17 15.4062V1.59375C17 0.717188 16.2828 0 15.4062 0ZM11.6875 2.65625C11.6875 2.36406 11.9266 2.125 12.2188 2.125H14.3438C14.6359 2.125 14.875 2.36406 14.875 2.65625V4.78125C14.875 5.07344 14.6359 5.3125 14.3438 5.3125H12.2188C12.0779 5.3125 11.9427 5.25653 11.8431 5.1569C11.7435 5.05727 11.6875 4.92215 11.6875 4.78125V2.65625ZM8.5 5.3125C9.33113 5.33396 10.121 5.6792 10.7013 6.27464C11.2815 6.87007 11.6063 7.66859 11.6063 8.5C11.6063 9.33141 11.2815 10.1299 10.7013 10.7254C10.121 11.3208 9.33113 11.666 8.5 11.6875C7.66887 11.666 6.87899 11.3208 6.29874 10.7254C5.71848 10.1299 5.39375 9.33141 5.39375 8.5C5.39375 7.66859 5.71848 6.87007 6.29874 6.27464C6.87899 5.6792 7.66887 5.33396 8.5 5.3125ZM14.875 14.3438C14.875 14.6359 14.6359 14.875 14.3438 14.875H2.65625C2.51535 14.875 2.38023 14.819 2.2806 14.7194C2.18097 14.6198 2.125 14.4846 2.125 14.3438V7.4375H3.29375C3.13618 8.20944 3.15228 9.00677 3.34088 9.77173C3.52948 10.5367 3.88586 11.2501 4.38421 11.8603C4.88256 12.4706 5.5104 12.9623 6.22225 13.2999C6.9341 13.6376 7.71214 13.8127 8.5 13.8125C9.28786 13.8127 10.0659 13.6376 10.7777 13.2999C11.4896 12.9623 12.1174 12.4706 12.6158 11.8603C13.1141 11.2501 13.4705 10.5367 13.6591 9.77173C13.8477 9.00677 13.8638 8.20944 13.7062 7.4375H14.875V14.3438Z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4003_1409">
+											<rect width="17" height="17" fill="transparent" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="program" class="program">
+				<div class="program__container">
+					<div class="program__head head-section">
+						<h2 class="head-section__title">
+							Що включає програма
+						</h2>
+					</div>
+					<div class="program__body">
+						<div class="program__img">
+							<picture>
+								<source srcset="img/program/image-mob.png" media="(max-width: 767.98px)">
+								<img src="img/program/image.png" alt="Image girl">
+							</picture>
+						</div>
+						<div class="program__content">
+							<div class="program__text">
+								<span class="text-italic">Наша програма тренувань розроблена спеціально для тих, хто
+									цінує свій час та комфорт. </span>
+								Ми пропонуємо вам індивідуальний підхід, адаптований до ваших потреб і цілей, зручність
+								домашніх тренувань та різноманітні програми, які зроблять ваші заняття ефективними та
+								цікавими.
+							</div>
+							<div class="program__text-block">
+								<h4>
+									Індивідуальний підхід
+								</h4>
+								<ul>
+									<li>
+										Кожне тренування підлаштовується під ваш рівень фізичної підготовки та особисті
+										цілі.
+									</li>
+									<li>
+										Персональні консультації та підтримка від тренера.
+									</li>
+								</ul>
+							</div>
+							<div class="program__text-block">
+								<h4>
+									Зручність домашніх тренувань
+								</h4>
+								<ul>
+									<li>
+										Тренуйтесь у зручний для вас час, не виходячи з дому.
+									</li>
+									<li>
+										Не потрібно витрачати час на дорогу до спортзалу.
+									</li>
+								</ul>
+							</div>
+							<div class="program__text-block">
+								<h4>
+									Різноманітні програми
+								</h4>
+								<ul>
+									<li>
+										Вибір з різних видів тренувань: кардіо, силові тренування, йога, розтяжка.
+									</li>
+									<li>
+										Можливість комбінувати різні види активності для досягнення найкращих
+										результатів.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="emphasis">
+				<div class="emphasis__container">
+					<div class="emphasis__head head-section">
+						<h2 class="head-section__title">
+							Основні акценти наших тренувань
+						</h2>
+					</div>
+					<div class="emphasis__items">
+						<div class="emphasis__item">
+							<div class="emphasis__item-icon">
+								<img src="img/emphasis/icon-1.svg" alt="Image">
+							</div>
+							<div class="emphasis__item-title">
+								Кардіотренування
+							</div>
+							<div class="emphasis__item-text">
+								Ефективно покращує витривалість і здоров'я серцево-судинної системи.
+							</div>
+						</div>
+						<div class="emphasis__item">
+							<div class="emphasis__item-icon">
+								<img src="img/emphasis/icon-2.svg" alt="Image">
+							</div>
+							<div class="emphasis__item-title">
+								силові тренування
+							</div>
+							<div class="emphasis__item-text">
+								Допомагають зміцнити м'язи та підвищити фізичну силу.
+							</div>
+						</div>
+						<div class="emphasis__item">
+							<div class="emphasis__item-icon">
+								<img src="img/emphasis/icon-3.svg" alt="Image">
+							</div>
+							<div class="emphasis__item-title">
+								Розтяжка
+							</div>
+							<div class="emphasis__item-text">
+								Покращує гнучкість і знімає м'язову напругу.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="whyus">
+				<div class="whyus__inner">
+					<div class="whyus__body">
+						<div class="whyus__content">
+							<div data-da=".whyus__inner, 767.98, 0" class="whyus__head head-section">
+								<h2 class="head-section__title">
+									Чому обирають нас
+								</h2>
+								<div class="head-section__text">
+									Наша програма створена для того, щоб допомогти вам досягти ваших фітнес-цілей легко
+									та приємно, з максимальною ефективністю та задоволенням від кожного тренування.
+								</div>
+							</div>
+							<div class="whyus__items">
+								<div class="whyus__item">
+									<div class="whyus__item-num">
+										01
+									</div>
+									<div class="whyus__item-body">
+										<div class="whyus__item-title">
+											Сертифікований тренер
+										</div>
+										<div class="whyus__item-text">
+											Наш тренер має висококваліфікаційні сертифікати і багаторічний досвід роботи
+											в фітнес-індустрії. Ми гарантуємо вам професійний підхід і безпеку під час
+											тренувань.
+										</div>
+									</div>
+								</div>
+								<div class="whyus__item">
+									<div class="whyus__item-num">
+										02
+									</div>
+									<div class="whyus__item-body">
+										<div class="whyus__item-title">
+											Гнучкий графік
+										</div>
+										<div class="whyus__item-text">
+											Ви можете обирати зручний для вас час для тренувань. Наш тренер
+											підлаштується під ваш розклад, щоб ваші заняття завжди були комфортними
+										</div>
+									</div>
+								</div>
+								<div class="whyus__item">
+									<div class="whyus__item-num">
+										03
+									</div>
+									<div class="whyus__item-body">
+										<div class="whyus__item-title">
+											Видимі результати:
+										</div>
+										<div class="whyus__item-text">
+											Ми гарантуємо, що ви побачите реальні зміни у своєму тілі і самопочутті вже
+											після декількох занять. Наші програми підібрані таким чином, щоб ви досягали
+											максимальних результатів у найкоротший термін
+										</div>
+									</div>
+								</div>
+								<div class="whyus__item">
+									<div class="whyus__item-num">
+										04
+									</div>
+									<div class="whyus__item-body">
+										<div class="whyus__item-title">
+											Підтримка 24/7
+										</div>
+										<div class="whyus__item-text">
+											Ми завжди на зв’язку і готові відповісти на ваші питання. Отримуйте
+											підтримку і мотивацію від нашого тренера в будь-який час доби.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="whyus__img">
+							<picture>
+								<source srcset="img/whyus-image-mob.png" media="(max-width: 1499.98px)">
+								<img src="img/whyus-image.png" alt="Image">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="programs" class="programs">
+				<div class="programs__container">
+					<div class="programs__head head-section">
+						<h2 class="head-section__title">
+							Обирайте свою програму
+						</h2>
+						<div class="head-section__text">
+							Знайдіть ідеальну програму для досягнення ваших цілей
+						</div>
+					</div>
+					<div class="programs__body">
+						<div class="programs__item program-card">
+							<div class="program-card__img">
+								<img src="img/сhoose/image-1.jpg" alt="Image">
+							</div>
+							<div class="program-card__title">
+								Схуднення
+							</div>
+							<div class="program-card__text">
+								Програма схуднення допоможе вам ефективно спалювати калорії, знижувати вагу та
+								покращувати загальну фізичну форму.
+							</div>
+							<a href="" class="program-card__btn button-empty">
+								Дізнатися більше
+							</a>
+						</div>
+						<div class="programs__item program-card">
+							<div class="program-card__img">
+								<img src="img/сhoose/image-2.jpg" alt="Image">
+							</div>
+							<div class="program-card__title">
+								Набір маси
+							</div>
+							<div class="program-card__text">
+								Програма набору маси спрямована на збільшення м'язової маси та покращення фізичної сили
+								через спеціально підібрані силові тренування та харчування
+							</div>
+							<a href="" class="program-card__btn button-empty">
+								Дізнатися більше
+							</a>
+						</div>
+						<div class="programs__item program-card">
+							<div class="program-card__img">
+								<img src="img/сhoose/image-3.jpg" alt="Image">
+							</div>
+							<div class="program-card__title">
+								Функціональне тренування
+							</div>
+							<div class="program-card__text">
+								Функціональне тренування покращує загальну фізичну підготовку, силу і координацію,
+								включаючи вправи, що імітують повсякденні рухи.
+							</div>
+							<a href="" class="program-card__btn button-empty">
+								Дізнатися більше
+							</a>
+						</div>
+					</div>
+					<a href="#contacts" class="programs__btn button--2">
+						Приєднуйся зараз
+					</a>
+				</div>
+			</section>
+			<section id="reviews" class="reviews">
+				<div class="reviews__container">
+					<div class="reviews__head head-section">
+						<h2 class="head-section__title">
+							Відгуки наших клієнтів
+						</h2>
+					</div>
+					<div class="reviews__slider swiper">
+						<div class="reviews__wrapper swiper-wrapper">
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__slide-img">
+									<img src="img/review-image.jpg" alt="Image">
+								</div>
+								<div class="reviews__slide-quotes">
+									<img src="img/quot.svg" alt="Image">
+								</div>
+								<div class="reviews__slide-text text-italic">
+									Завдяки цій фітнес-програмі я досягла своїх цілей швидше, ніж очікувала, і отримала
+									справжнє задоволення від тренувань вдома!
+								</div>
+								<div class="reviews__slide-name">
+									Марія Малиновська
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__slide-img">
+									<img src="img/review-image.jpg" alt="Image">
+								</div>
+								<div class="reviews__slide-quotes">
+									<img src="img/quot.svg" alt="Image">
+								</div>
+								<div class="reviews__slide-text text-italic">
+									Завдяки цій фітнес-програмі я досягла своїх цілей швидше, ніж очікувала, і отримала
+									справжнє задоволення від тренувань вдома!
+								</div>
+								<div class="reviews__slide-name">
+									Марія Малиновська
+								</div>
+							</div>
+						</div>
+						<div class="reviews__arrows">
+							<button type="button" class="swiper-button-prev">
+								<svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.896485 5L5.24948 0.646004L5.95748 1.353L2.81048 4.5L14.1035 4.5L14.1035 5.5L2.81048 5.5L5.95748 8.646L5.24948 9.354L0.896485 5Z" />
+								</svg>
+							</button>
+							<button type="button" class="swiper-button-next">
+								<svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M14.1035 5L9.75052 0.646004L9.04252 1.353L12.1895 4.5L0.896516 4.5L0.896516 5.5L12.1895 5.5L9.04252 8.646L9.75052 9.354L14.1035 5Z" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="faq" class="faq">
+				<div class="faq__container">
+					<div class="faq__body">
+						<div class="faq__img">
+							<img src="img/faq-girl.png" alt="Image">
+						</div>
+						<div class="faq__content">
+							<div data-da=".faq__body, 767.98, 0" class="faq__head head-section">
+								<h2 class="head-section__title">
+									Часті питання від вас
+								</h2>
+								<div class="head-section__text">
+									Наша програма створена для того, щоб допомогти вам досягти ваших фітнес-цілей легко
+									та приємно, з максимальною ефективністю та задоволенням від кожного тренування.
+								</div>
+							</div>
+							<div data-spollers class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Чи ефективні тренування вдома без спеціального обладнання?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+								<details data-open class="spollers__item">
+									<summary class="spollers__title">
+										Яке обладнання необхідне для домашніх тренувань?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Як мотивувати себе до регулярних тренувань вдома?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Як створити ефективну програму тренувань вдома?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Скільки часу потрібно тренуватися вдома, щоб побачити результати?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Скільки часу потрібно тренуватися вдома, щоб побачити результати?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Чи потрібно дотримуватися дієти під час тренувань вдома?
+									</summary>
+									<div class="spollers__body">
+										Основне обладнання може включати гантелі, фітнес-резинки, килимок для йоги або
+										пилотки, але навіть без них можна досягти хороших результатів.
+									</div>
+								</details>
+							</div>
+							<a href="#contacts" class="faq__btn button">
+								Задати питання
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contacts" class="contacts">
+				<div class="contacts__container">
+					<div class="contacts__body">
+						<div class="contacts__head head-section">
+							<h2 class="head-section__title">
+								Отримайте безкоштовну консультацію
+							</h2>
+							<div class="head-section__text">
+								Наша програма створена для того, щоб допомогти вам досягти ваших фітнес-цілей легко та
+								приємно, з максимальною ефективністю та задоволенням від кожного тренування.
+							</div>
+						</div>
+						<form action="#" class="contacts__form">
+							<input autocomplete="off" type="text" name="name" placeholder="Ваше Ім'я" class="contacts__input input">
+							<input autocomplete="off" type="text" name="phone" placeholder="Ваш телефон" class="contacts__input input">
+							<input autocomplete="off" type="text" name="email" placeholder="Email" class="contacts__input input">
+							<button type="submit" class="contacts__btn button--2">
+								Отримати консультацію
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="banner">
+				<div class="banner__container">
+					<div class="banner__body">
+						<div class="banner__img">
+							<img src="img/banner-image.jpg" alt="Image">
+						</div>
+						<div class="banner__content">
+							<h3 class="banner__title">
+								Готові змінити своє життя?
+							</h3>
+							<div class="banner__text">
+								Запишіться на перше тренування вже сьогодні!
+							</div>
+							<a href="#contacts" class="banner__btn button--2">
+								Приєднуйся зараз
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="tariffs" class="tariffs">
+				<div class="tariffs__container">
+					<div class="tariffs__head head-section">
+						<h2 class="head-section__title">
+							Оберіть свій пакет тренувань
+						</h2>
+						<div class="head-section__text">
+							Ці пакети дозволяють обрати рівень підтримки та інтенсивності, який підходить саме вам, забезпечуючи ефективне та комфортне досягнення ваших фітнес-цілей вдома.
+						</div>
+					</div>
+					<div class="tariffs__body">
+						<div class="tariffs__item tariff-card">
+							<div class="tariff-card__top">
+								<div class="tariff-card__duration">
+									1 місяць
+								</div>
+								<div class="tariff-card__price">
+									800 <span>грн</span>
+								</div>
+								<div class="tariff-card__name">
+									Лайт
+								</div>
+							</div>
+							<ul class="tariff-card__list">
+								<li class="tariff-card__item">
+									Підбір вправ відповідно до ваших цілей (схуднення, набір маси, функціональне
+									тренування)
+								</li>
+								<li class="tariff-card__item">
+									Відеоуроки та демонстрації
+								</li>
+								<li class="tariff-card__item">
+									Доступ до бібліотеки відеоуроків з докладними інструкціями
+								</li>
+								<li class="tariff-card__item">
+									Підтримка тренера онлайн 24/7
+								</li>
+								<li class="tariff-card__item">
+									Рекомендації з харчування
+								</li>
+							</ul>
+							<a href="" class="tariff-card__btn button">
+								Замовити курс
+							</a>
+						</div>
+						<div class="tariffs__item tariff-card vip-card">
+							<div class="tariff-card__top">
+								<div class="tariff-card__duration">
+									6 місяців
+								</div>
+								<div class="tariff-card__price">
+									6000 <span>грн</span>
+								</div>
+								<div class="tariff-card__name">
+									VIP
+								</div>
+							</div>
+							<ul class="tariff-card__list">
+								<li class="tariff-card__item">
+									Підбір вправ відповідно до ваших цілей (схуднення, набір маси, функціональне
+									тренування)
+								</li>
+								<li class="tariff-card__item">
+									Щотижневі живі тренування з тренером через відеозв'язок
+								</li>
+								<li class="tariff-card__item">
+									Доступ до розширеної бібліотеки відеоуроків.
+								</li>
+								<li class="tariff-card__item">
+									Щоденна підтримка через чат або телефон
+								</li>
+								<li class="tariff-card__item">
+									Щотижневі консультації та корекція техніки.
+								</li>
+								<li class="tariff-card__item">
+									Розробка індивідуального плану харчування з урахуванням ваших потреб та цілей.
+								</li>
+								<li class="tariff-card__item">
+									Щомісячні консультації з нутриціологом.
+								</li>
+							</ul>
+							<a href="" class="tariff-card__btn button">
+								Замовити курс
+							</a>
+						</div>
+						<div class="tariffs__item tariff-card">
+							<div class="tariff-card__top">
+								<div class="tariff-card__duration">
+									3 місяця
+								</div>
+								<div class="tariff-card__price">
+									2500 <span>грн</span>
+								</div>
+								<div class="tariff-card__name">
+									Стандарт
+								</div>
+							</div>
+							<ul class="tariff-card__list">
+								<li class="tariff-card__item">
+									Підбір вправ відповідно до ваших цілей (схуднення, набір маси, функціональне
+									тренування)
+								</li>
+								<li class="tariff-card__item">
+									Щотижневі живі тренування з тренером через відеозв'язок
+								</li>
+								<li class="tariff-card__item">
+									Доступ до бібліотеки відеоуроків з докладними інструкціями
+								</li>
+								<li class="tariff-card__item">
+									Щотижневі консультації та корекція техніки.
+								</li>
+								<li class="tariff-card__item">
+									Розробка індивідуального плану харчування з урахуванням ваших потреб та цілей.
+								</li>
+							</ul>
+							<a href="" class="tariff-card__btn button">
+								Замовити курс
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<a data-da=".footer__body, 767.98, 0" href="" class="footer__logo">
+							<img src="img/logo.svg" alt="logo">
+						</a>
+						<div class="footer__socials">
+							<a href="" class="footer__social">
+								<svg width="9" height="17" viewBox="0 0 9 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 9.775H8.14286L9 6.375H6V4.675C6 3.7995 6 2.975 7.71429 2.975H9V0.119C8.72057 0.0824501 7.66543 0 6.55114 0C4.224 0 2.57143 1.40845 2.57143 3.995V6.375H0V9.775H2.57143V17H6V9.775Z" />
+								</svg>
+							</a>
+							<a href="" class="footer__social">
+								<svg width="17" height="14" viewBox="0 0 17 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M17 1.64706C16.3743 1.93529 15.6998 2.12471 15.001 2.21529C15.7161 1.77882 16.2686 1.08706 16.5287 0.255294C15.8542 0.667059 15.1066 0.955294 14.3184 1.12C13.6764 0.411765 12.7744 0 11.7505 0C9.84082 0 8.28059 1.58118 8.28059 3.53294C8.28059 3.81294 8.3131 4.08471 8.36998 4.34C5.47706 4.19177 2.90105 2.78353 1.18642 0.650588C0.885755 1.16941 0.715105 1.77882 0.715105 2.42118C0.715105 3.64824 1.32457 4.73529 2.26721 5.35294C1.69025 5.35294 1.15392 5.18824 0.682601 4.94118V4.96588C0.682601 6.67882 1.88528 8.11176 3.47801 8.43294C2.96674 8.57536 2.42976 8.5951 1.90966 8.49059C2.13037 9.19263 2.56263 9.80692 3.14566 10.2471C3.7287 10.6873 4.4332 10.9313 5.16013 10.9447C3.92793 11.9334 2.40049 12.4677 0.828872 12.46C0.552581 12.46 0.276291 12.4435 0 12.4106C1.54398 13.4153 3.3805 14 5.34704 14C11.7505 14 15.2691 8.61412 15.2691 3.94471C15.2691 3.78824 15.2691 3.64 15.261 3.48353C15.9436 2.98941 16.5287 2.36353 17 1.64706Z" />
+								</svg>
+							</a>
+							<a href="" class="footer__social">
+								<svg width="17" height="17" viewBox="0 0 17 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4003_1409)">
+										<path d="M15.4062 0H1.59375C0.717188 0 0 0.717188 0 1.59375V15.4062C0 16.2828 0.717188 17 1.59375 17H15.4062C16.2828 17 17 16.2828 17 15.4062V1.59375C17 0.717188 16.2828 0 15.4062 0ZM11.6875 2.65625C11.6875 2.36406 11.9266 2.125 12.2188 2.125H14.3438C14.6359 2.125 14.875 2.36406 14.875 2.65625V4.78125C14.875 5.07344 14.6359 5.3125 14.3438 5.3125H12.2188C12.0779 5.3125 11.9427 5.25653 11.8431 5.1569C11.7435 5.05727 11.6875 4.92215 11.6875 4.78125V2.65625ZM8.5 5.3125C9.33113 5.33396 10.121 5.6792 10.7013 6.27464C11.2815 6.87007 11.6063 7.66859 11.6063 8.5C11.6063 9.33141 11.2815 10.1299 10.7013 10.7254C10.121 11.3208 9.33113 11.666 8.5 11.6875C7.66887 11.666 6.87899 11.3208 6.29874 10.7254C5.71848 10.1299 5.39375 9.33141 5.39375 8.5C5.39375 7.66859 5.71848 6.87007 6.29874 6.27464C6.87899 5.6792 7.66887 5.33396 8.5 5.3125ZM14.875 14.3438C14.875 14.6359 14.6359 14.875 14.3438 14.875H2.65625C2.51535 14.875 2.38023 14.819 2.2806 14.7194C2.18097 14.6198 2.125 14.4846 2.125 14.3438V7.4375H3.29375C3.13618 8.20944 3.15228 9.00677 3.34088 9.77173C3.52948 10.5367 3.88586 11.2501 4.38421 11.8603C4.88256 12.4706 5.5104 12.9623 6.22225 13.2999C6.9341 13.6376 7.71214 13.8127 8.5 13.8125C9.28786 13.8127 10.0659 13.6376 10.7777 13.2999C11.4896 12.9623 12.1174 12.4706 12.6158 11.8603C13.1141 11.2501 13.4705 10.5367 13.6591 9.77173C13.8477 9.00677 13.8638 8.20944 13.7062 7.4375H14.875V14.3438Z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4003_1409">
+											<rect width="17" height="17" fill="transparent" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__copy">
+							©2024. FitCort. Усі права захищені
+						</div>
+					</div>
+					<nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="#program" class="footer__menu-link">
+									Про програму
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#programs" class="footer__menu-link">
+									Послуги
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#reviews" class="footer__menu-link">
+									Відгуки
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#faq" class="footer__menu-link">
+									Питання
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="#tariffs" class="footer__menu-link">
+									Тарифні плани
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__contacts">
+						<a href="tel:0631235788" class="footer__contact">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.7062 13.425L14.1062 12.025C14.2948 11.8388 14.5334 11.7113 14.793 11.6581C15.0526 11.6048 15.3221 11.6281 15.5687 11.725L17.275 12.4063C17.5243 12.5074 17.738 12.6801 17.8892 12.9026C18.0405 13.125 18.1225 13.3873 18.125 13.6563V16.7813C18.1235 16.9643 18.0851 17.1451 18.0119 17.3128C17.9388 17.4805 17.8324 17.6317 17.6993 17.7573C17.5661 17.8828 17.409 17.9801 17.2372 18.0433C17.0655 18.1065 16.8828 18.1343 16.7 18.125C4.74375 17.3813 2.33125 7.25628 1.875 3.38128C1.85382 3.19099 1.87317 2.99837 1.93178 2.81609C1.99039 2.63382 2.08693 2.46602 2.21504 2.32374C2.34316 2.18145 2.49995 2.0679 2.6751 1.99057C2.85025 1.91323 3.03979 1.87385 3.23125 1.87503H6.25C6.51938 1.87582 6.78236 1.95719 7.00512 2.10867C7.22788 2.26015 7.40023 2.4748 7.5 2.72503L8.18125 4.43128C8.28141 4.67694 8.30696 4.94668 8.25472 5.20678C8.20247 5.46689 8.07475 5.70584 7.8875 5.89378L6.4875 7.29378C6.4875 7.29378 7.29375 12.75 12.7062 13.425Z" />
+							</svg>
+							<span>(063) 123-57-88</span>
+						</a>
+						<a href="mailto:superfitcort@gmail.com" class="footer__contact">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21.5312 4.0625H4.46875C3.71479 4.06331 2.99194 4.36317 2.45881 4.89631C1.92567 5.42944 1.62581 6.15229 1.625 6.90625V19.0938C1.62581 19.8477 1.92567 20.5706 2.45881 21.1037C2.99194 21.6368 3.71479 21.9367 4.46875 21.9375H21.5312C22.2852 21.9367 23.0081 21.6368 23.5412 21.1037C24.0743 20.5706 24.3742 19.8477 24.375 19.0938V6.90625C24.3742 6.15229 24.0743 5.42944 23.5412 4.89631C23.0081 4.36317 22.2852 4.06331 21.5312 4.0625ZM20.8112 8.76637L13.4987 14.4539C13.3561 14.5647 13.1806 14.6249 13 14.6249C12.8194 14.6249 12.6439 14.5647 12.5013 14.4539L5.18883 8.76637C5.10291 8.70149 5.03075 8.62018 4.97653 8.52717C4.92231 8.43415 4.88712 8.33129 4.87299 8.22456C4.85887 8.11783 4.8661 8.00936 4.89426 7.90545C4.92243 7.80153 4.97096 7.70425 5.03704 7.61926C5.10313 7.53427 5.18544 7.46325 5.27921 7.41035C5.37297 7.35744 5.47632 7.3237 5.58324 7.31108C5.69016 7.29846 5.79852 7.30722 5.90202 7.33684C6.00553 7.36646 6.10212 7.41636 6.18617 7.48363L13 12.7832L19.8138 7.48363C19.9842 7.35496 20.1984 7.29853 20.4101 7.32654C20.6217 7.35455 20.8139 7.46474 20.9449 7.6333C21.076 7.80185 21.1354 8.01522 21.1104 8.22725C21.0853 8.43929 20.9779 8.63296 20.8112 8.76637Z" />
+							</svg>
+							<span>superfitcort@gmail.com</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241015134044"></script>
+</body>
+
+</html>
